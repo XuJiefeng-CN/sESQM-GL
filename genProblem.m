@@ -21,7 +21,8 @@ switch type
             [U, ~] = qr(randn(n));
             Lambda = 100*sprand(n, 1, sp);
             Atemp =  (U.*Lambda')*U';
-            A(i, :, :) = .5*(Atemp + Atemp') + 1e-14*eye(n);
+            % Add 1e-14 to enhance numerical stability of CVX
+            A(i, :, :) = .5*(Atemp + Atemp') + 1e-14*eye(n); 
             qs(i, :) = 10+randn(n, 1);
         end
     
