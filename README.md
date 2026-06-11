@@ -1,5 +1,5 @@
 # sESQM
-A MATLAB package implementing the smoothing extended sequential quadratic method (sESQM) [1] for solving group Lasso regularized minimization problems with polynomial constraints (PCGL):
+A MATLAB package implementing the smoothing extended sequential quadratic method (sESQM) [[1]] for solving group Lasso regularized minimization problems with polynomial constraints (PCGL):
 
 $$\eqalign{
 \min_{x\in \mathbb{R}^{n}} & \frac{1}{2}x^{\top} Q x + q^{\top}x + \tau \sum_{J \in 𝒥} |x_{J}|_{2}\\ 
@@ -18,8 +18,8 @@ For further details, please refer to our paper in [[1]].
 
 | File | Description |
 |---|---|
-| `demo_conv.m` | Reproduces the numerical experiments from [[1]] examining the effect of different decay rates of $\{\mu_k\}$ for the **convex** setting. |
-| `demo_nonconv.m` | Reproduces the numerical experiments from [[1]] examining the effect of different decay rates of $\{\mu_k\}$ for the **nonconvex** setting. |
+| `demo_conv.m` | Reproduces the numerical experiments from [[1]] examining the effect of different decay rates of $\lbrace \mu_k \rbrace$ for the **convex** setting. |
+| `demo_nonconv.m` | Reproduces the numerical experiments from [[1]] examining the effect of different decay rates of $\lbrace \mu_k \rbrace$  for the **nonconvex** setting. |
 | `sESQM_GL.m` | Core implementation of sESQM for solving PCGL. |
 | `genProblem.m` | Generates problem data for PCGL instances. |
 | `sym_array.m` | Symmetrizes a given array. |
