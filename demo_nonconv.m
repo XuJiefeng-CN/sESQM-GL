@@ -197,7 +197,7 @@ for t = 1:tt
     xlim([0, opt.K])
 end
 legend(Mths, 'Location','northeast', 'FontSize', 8);
-title(sprintf('\\ \\ \\ \\ {(%s)} Nonconvex setting', prob), 'Interpreter','latex')
+title(sprintf('\\ \\ \\ \\ \\ {(%s)} Nonconvex setting', prob), 'Interpreter','latex')
 xlabel('iteration $k$','Interpreter','latex')
 xticks([0 1000:2000:opt.K])
 exportgraphics(gca, [foldername '/' prob, '-psi.pdf'], 'ContentType', 'vector');
