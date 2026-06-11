@@ -147,7 +147,7 @@ fprintf('-----------------------------------------------------------------------
 fID_table = fopen([foldername '/' prob, '-table.txt'], 'w');
 t = 0;
 fprintf(fID_table, '\\begin{tabular}{cccc} \n');
-fprintf(fID_table, '\\multicolumn{4}{c}{{(%s)} Nonconvex setting}\\\\ \n', prob, n, m);
+fprintf(fID_table, '\\multicolumn{4}{c}{{(%s)} Nonconvex setting}\\\\ \n', prob);
 fprintf(fID_table, '\\hline \n');
 fprintf(fID_table, '$(\\bar r, \\bar s)$ & obj. & constr. & \\text{time} \\\\\n');
 fprintf(fID_table, '\\hline \n');
