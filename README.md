@@ -28,8 +28,8 @@ For further details, please refer to our paper in [[1]].
 | `df_fun.m` | Evaluates the gradient of $f$. |
 
 # References
-[1]: https://arxiv.org/pdf/2505.12314 "J. Xu, T. K. Pong and Y. L. Zhang. A smoothing extended sequential quadratic method for difference-of-convex optimization over a convex composite inequality constraint. Preprint (2026)."
-\[1\] [J. Xu, T. K. Pong and Y. L. Zhang. A smoothing extended sequential quadratic method for difference-of-convex optimization over a convex composite inequality constraint. Preprint (2026).]()
+[1]: https://arxiv.org/abs/2606.13343 "J. Xu, T. K. Pong and Y. L. Zhang. A smoothing extended sequential quadratic method for difference-of-convex optimization over a convex composite inequality constraint. Preprint (2026)."
+\[1\] [J. Xu, T. K. Pong and Y. L. Zhang. A smoothing extended sequential quadratic method for difference-of-convex optimization over a convex composite inequality constraint. Preprint (2026).](https://arxiv.org/abs/2606.13343)
 
 
 
