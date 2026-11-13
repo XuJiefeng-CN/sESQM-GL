@@ -5,7 +5,7 @@
 
 clear; clc;
 close all
-prob = 'e';
+prob = 'a';
 
 tau = 1;  % regularize parameter
 J = 2;    % the length of each group: mod(n, J) = 0
@@ -15,7 +15,7 @@ K = 5000;
 
 switch prob
     case 'a'
-        % instance b
+        % instance a
         rand('seed', 2029)
         randn('seed', 2029)
 
@@ -27,7 +27,7 @@ switch prob
         % convex, least square f
         type = 1; dbar = 2;        
         
-        % generate symthetic random data
+        % generate synthetic random data
         [Q, q, A, qs, b, x0] = genProblem(m, n, p, type, dbar);
 
         % Decrease rate of mu_k
@@ -47,7 +47,7 @@ switch prob
         % convex, least square f
         type = 1; dbar = 2;        
         
-        % generate symthetic random data
+        % generate synthetic random data
         [Q, q, A, qs, b, x0] = genProblem(m, n, p, type, dbar);
 
         % Decrease rate of mu_k
@@ -76,7 +76,7 @@ if ~exist(foldername, 'dir')
 end
 fID = fopen([foldername '/log.txt'], 'a');
 
-fprintf(fID, 'Convex settings: (p,n,m) = (%3d, %3d,%3d), runing at %10s \n', p, n, m, char(timestamp));
+fprintf(fID, 'Convex settings: (p,n,m) = (%3d, %3d,%3d), running at %10s \n', p, n, m, char(timestamp));
 fprintf(fID, '-------------------------------------------------------------------------------------------\n');
 fprintf(fID, '(%5s, %5s)   %8s   %9s   %8s   %5s   %7s   %4s   %8s   %8s   %8s   %8s    %8s\n', ...
              'rbar', 'sbar', 'f', 'g', 'time', 'iter', 'mean ls', 'mu0', 'mu', 'gamma0', 'gamma', 'L_mu', 'status');

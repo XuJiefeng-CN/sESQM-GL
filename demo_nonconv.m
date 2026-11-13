@@ -33,7 +33,7 @@ switch prob
         sbars = [3 6];
 
     case 'e' % random instance
-        % instance d
+        % instance e
         % rand('seed', 201)
         % randn('seed', 201)
 

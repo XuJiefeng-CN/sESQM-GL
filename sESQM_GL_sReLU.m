@@ -1,12 +1,12 @@
 function [x, psi, g, out] = sESQM_GL_sReLU(Q, q, tau, J, A, qs, b, M, opt)
-% The implementaion of sESQM 
+% The implementation of sESQM 
 % & \min_{x} .5 x^T Q x + q^T x + tau * \sum_{J \in \mathcal{J}} \|x_{J}\|_{2} 
 % s.t. c_{i}(x) = \sum_{j_l, 2<= l <= d} a_{i, j_2, \ldots, j_d} x_{j_2} \cdots x_{j_d} 
-%                                           -  b_i \le 0, i \in [m],
+%                                          x'q^i -  b_i \le 0, i \in [m],
 % s.t. x \in \mathcal{C} = \{ z : \| z_{J} \|_{2} \le M for all J\in \mathcal{J} \}.
-% Convex setting: J=1, b>0; Q and A_i are PSD
+% Convex setting: J=2, b>0; Q and A_i are PSD
 
-% hmu = h^+ squar 1/(2*mu)\| \|_2^2 + mu/2
+% hmu = h^+ square 1/(2*mu)\| \|_2^2 + mu/2
 
 if ~isfield(opt, 'mu0')
     opt.mu0 = 10^6;
@@ -62,7 +62,7 @@ c2 = 1e-3/max(1, gamma0*mu0);
 c3 = 2;
 
 % recorders
-psi_s = [];         % recording the values of objective f
+psi_s = [];         % recording the values of objective 
 gs = [];            % g = max_i g_i
 
 

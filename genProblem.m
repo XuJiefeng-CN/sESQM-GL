@@ -5,7 +5,7 @@ sp = .1;
 b = .1 + .9*rand(m, 1);
 switch type
     case 1 % convex QCQP
-        % f(x) = \| Q x - q \|^2
+        % f(x) = 1/2 \| Q x - q \|^2
         Q = randn(p, n);
         Q = Q./vecnorm(Q, 2, 1);
         q = 10 + randn(p, 1);
@@ -26,7 +26,7 @@ switch type
             qs(i, :) = 10+randn(n, 1);
         end
     
-    case 2 % nonconvex homogeniuos constraint
+    case 2 % nonconvex homogeneuos constraint
         % orthogonal matrix
         [U, ~] = qr(randn(n));
         Lambda = 20*(2*rand(n, 1) - 1);
@@ -38,7 +38,7 @@ switch type
         x0 = -(Q\q);
 
         A = 2*rand([m,n*ones(1,dbar-1)])-1; 
-        A = sym_array(A, 2:dbar);      % partial symetrize
+        A = sym_array(A, 2:dbar);      % partial symmetrize
         qs = zeros(m, n);
 end
 
