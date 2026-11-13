@@ -170,7 +170,7 @@ g_cvx = max((reshape(Ax_cvx, [], n)+qs)*x_cvx -b);
 cvx_G_norm = norm(x_cvx(1+floor(n/J)*J: end), 2);
 g_cvx = max(g_cvx,  cvx_G_norm- M);
 for ii = 1:floor(n/J)
-    cvx_G_norm = norm(x_cvx(1+(ii-1)*J: ii*J), 2) - M;
+    cvx_G_norm = norm(x_cvx(1+(ii-1)*J: ii*J), 2);
     g_cvx = max(g_cvx,  cvx_G_norm- M);
 end
 fprintf(fID, '%4s %3s | %10.7f | %9.2e | %8.5f\n', ...

@@ -20,7 +20,7 @@ For further details, please refer to our paper in [[1]].
 |---|---|
 | `demo_conv.m` | Reproduces the numerical experiments from [[1]] examining the effect of different decay rates of $\lbrace \mu_k \rbrace$ for the **convex** setting. |
 | `demo_nonconv.m` | Reproduces the numerical experiments from [[1]] examining the effect of different decay rates of $\lbrace \mu_k \rbrace$  for the **nonconvex** setting. |
-| `sESQM_GL.m` | Core implementation of sESQM for solving PCGL. |
+| `sESQM_GL_sReLU.m` | Core implementation of sESQM for solving PCGL. |
 | `genProblem.m` | Generates problem data for PCGL instances. |
 | `sym_array.m` | Symmetrizes a given array. |
 | `P1_fun.m` | Evaluates the group Lasso regularization term $P_1(x) = \tau \sum_{J \in 𝒥} \|x_{J}\|_{2}$. |
